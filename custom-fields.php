@@ -44,7 +44,7 @@ function dwv_integration_custom_fields() {
           'type' => 'gallery', // Tipo de campo galeria
           'instructions' => 'Selecione ou faça upload de imagens para a galeria do apartamento.',
           
-          'mime_types' => 'jpg,jpeg,png', // Tipos de arquivo permitidos
+          // 'mime_types' => 'jpg,jpeg,png', // Tipos de arquivo permitidos
         ),
 
 

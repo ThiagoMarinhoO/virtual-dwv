@@ -1,0 +1,169 @@
+2023-10-27 16:02:00 - published_at: 
+2023-10-27 16:02:00 - post_modified_date: 27 de outubro de 2023
+2023-10-27 16:02:04 - published_at: 
+2023-10-27 16:02:04 - post_modified_date: 27 de outubro de 2023
+2023-10-27 16:02:07 - published_at: 
+2023-10-27 16:02:07 - post_modified_date: 27 de outubro de 2023
+2023-10-27 16:02:07 - Chegamos na galeria
+2023-10-27 16:02:07 - Baixando imagem 1
+2023-10-27 16:02:11 - Erro ao fazer download da imagem: cURL error 18: transfer closed with 669636 bytes remaining to read
+2023-10-27 16:02:11 - Baixando imagem 2
+2023-10-27 16:02:13 - Não deu erro
+2023-10-27 16:02:21 - Deu bom :)
+2023-10-27 16:02:21 - Baixando imagem 3
+2023-10-27 16:02:23 - Não deu erro
+2023-10-27 16:02:31 - Deu bom :)
+2023-10-27 16:02:31 - Baixando imagem 4
+2023-10-27 16:02:32 - Não deu erro
+2023-10-27 16:02:41 - Deu bom :)
+2023-10-27 16:02:41 - Baixando imagem 5
+2023-10-27 16:02:42 - Não deu erro
+2023-10-27 16:02:49 - Deu bom :)
+2023-10-27 16:02:49 - Baixando imagem 6
+2023-10-27 16:02:50 - Não deu erro
+2023-10-27 16:02:58 - Deu bom :)
+2023-10-27 16:02:58 - Baixando imagem 7
+2023-10-27 16:02:59 - Erro ao fazer download da imagem: Forbidden
+2023-10-27 16:02:59 - Baixando imagem 8
+2023-10-27 16:03:02 - Não deu erro
+2023-10-27 16:03:07 - Deu bom :)
+2023-10-27 16:03:07 - Baixando imagem 9
+2023-10-27 16:03:09 - Não deu erro
+2023-10-27 16:03:13 - Deu bom :)
+2023-10-27 16:03:13 - Baixando imagem 10
+2023-10-27 16:03:14 - Não deu erro
+2023-10-27 16:03:20 - Deu bom :)
+2023-10-27 16:03:20 - Baixando imagem 11
+2023-10-27 16:03:22 - Não deu erro
+2023-10-27 16:03:27 - Deu bom :)
+2023-10-27 16:03:27 - Cheguei nas plantas
+2023-10-27 16:03:27 - Baixando planta 1
+2023-10-27 16:03:28 - Não deu erro
+2023-10-27 16:03:33 - Baixou a planta :)
+2023-10-27 16:03:33 - Baixando planta 2
+2023-10-27 16:03:35 - Não deu erro
+2023-10-27 16:03:43 - Baixou a planta :)
+2023-10-27 16:03:43 - supostamente adicionado imagens ao campo acf
+2023-10-27 16:03:43 - supostamente adicionado imagens ao campo acf
+2023-10-27 16:03:47 - published_at: 
+2023-10-27 16:03:47 - post_modified_date: 27 de outubro de 2023
+2023-10-27 16:03:47 - Chegamos na galeria
+2023-10-27 16:03:47 - Baixando imagem 1
+2023-10-27 16:03:49 - Não deu erro
+2023-10-27 16:03:58 - Deu bom :)
+2023-10-27 16:03:58 - Baixando imagem 2
+2023-10-27 16:03:59 - Não deu erro
+2023-10-27 16:04:05 - Deu bom :)
+2023-10-27 16:04:05 - Baixando imagem 3
+2023-10-27 16:04:05 - Não deu erro
+2023-10-27 16:04:10 - Deu bom :)
+2023-10-27 16:04:10 - Baixando imagem 4
+2023-10-27 16:04:10 - Não deu erro
+2023-10-27 16:04:16 - Deu bom :)
+2023-10-27 16:04:16 - Baixando imagem 5
+2023-10-27 16:04:17 - Não deu erro
+2023-10-27 16:04:22 - Deu bom :)
+2023-10-27 16:04:22 - Baixando imagem 6
+2023-10-27 16:04:54 - Não deu erro
+2023-10-27 16:04:58 - Deu bom :)
+2023-10-27 16:04:58 - Baixando imagem 7
+2023-10-27 16:04:59 - Erro ao fazer download da imagem: Forbidden
+2023-10-27 16:04:59 - Baixando imagem 8
+2023-10-27 16:04:59 - Não deu erro
+2023-10-27 16:05:05 - Deu bom :)
+2023-10-27 16:05:05 - Baixando imagem 9
+2023-10-27 16:05:05 - Não deu erro
+2023-10-27 16:05:08 - Deu bom :)
+2023-10-27 16:05:08 - Baixando imagem 10
+2023-10-27 16:05:09 - Não deu erro
+2023-10-27 16:05:13 - Deu bom :)
+2023-10-27 16:05:13 - Baixando imagem 11
+2023-10-27 16:05:14 - Não deu erro
+2023-10-27 16:05:19 - Deu bom :)
+2023-10-27 16:05:19 - Cheguei nas plantas
+2023-10-27 16:05:19 - Baixando planta 1
+2023-10-27 16:05:19 - Não deu erro
+2023-10-27 16:05:25 - Baixou a planta :)
+2023-10-27 16:05:25 - Baixando planta 2
+2023-10-27 16:05:26 - Não deu erro
+2023-10-27 16:05:34 - Baixou a planta :)
+2023-10-27 16:05:34 - supostamente adicionado imagens ao campo acf
+2023-10-27 16:05:34 - supostamente adicionado imagens ao campo acf
+2023-10-27 16:05:37 - published_at: 
+2023-10-27 16:05:37 - post_modified_date: 27 de outubro de 2023
+2023-10-27 16:05:37 - Chegamos na galeria
+2023-10-27 16:05:37 - Baixando imagem 1
+2023-10-27 16:05:37 - Não deu erro
+2023-10-27 16:05:46 - Deu bom :)
+2023-10-27 16:05:46 - Baixando imagem 2
+2023-10-27 16:05:47 - Não deu erro
+2023-10-27 16:05:53 - Deu bom :)
+2023-10-27 16:05:53 - Baixando imagem 3
+2023-10-27 16:05:53 - Não deu erro
+2023-10-27 16:05:59 - Deu bom :)
+2023-10-27 16:05:59 - Baixando imagem 4
+2023-10-27 16:05:59 - Não deu erro
+2023-10-27 16:06:06 - Deu bom :)
+2023-10-27 16:06:06 - Baixando imagem 5
+2023-10-27 16:06:07 - Não deu erro
+2023-10-27 16:06:12 - Deu bom :)
+2023-10-27 16:06:12 - Baixando imagem 6
+2023-10-27 16:06:14 - Não deu erro
+2023-10-27 16:06:19 - Deu bom :)
+2023-10-27 16:06:19 - Baixando imagem 7
+2023-10-27 16:06:20 - Erro ao fazer download da imagem: Forbidden
+2023-10-27 16:06:20 - Baixando imagem 8
+2023-10-27 16:06:21 - Não deu erro
+2023-10-27 16:06:26 - Deu bom :)
+2023-10-27 16:06:26 - Baixando imagem 9
+2023-10-27 16:06:27 - Não deu erro
+2023-10-27 16:06:30 - Deu bom :)
+2023-10-27 16:06:30 - Baixando imagem 10
+2023-10-27 16:06:30 - Não deu erro
+2023-10-27 16:06:36 - Deu bom :)
+2023-10-27 16:06:36 - Baixando imagem 11
+2023-10-27 16:06:36 - Não deu erro
+2023-10-27 16:06:42 - Deu bom :)
+2023-10-27 16:06:42 - Cheguei nas plantas
+2023-10-27 16:06:42 - Baixando planta 1
+2023-10-27 16:06:42 - Não deu erro
+2023-10-27 16:06:48 - Baixou a planta :)
+2023-10-27 16:06:48 - Baixando planta 2
+2023-10-27 16:06:49 - Não deu erro
+2023-10-27 16:06:57 - Baixou a planta :)
+2023-10-27 16:06:57 - supostamente adicionado imagens ao campo acf
+2023-10-27 16:06:57 - supostamente adicionado imagens ao campo acf
+2023-10-27 16:07:01 - published_at: 
+2023-10-27 16:07:01 - post_modified_date: 27 de outubro de 2023
+2023-10-27 16:07:01 - Chegamos na galeria
+2023-10-27 16:07:01 - Baixando imagem 1
+2023-10-27 16:07:04 - Não deu erro
+2023-10-27 16:07:35 - Deu bom :)
+2023-10-27 16:07:35 - Baixando imagem 2
+2023-10-27 16:07:36 - Não deu erro
+2023-10-27 16:07:52 - Deu bom :)
+2023-10-27 16:07:52 - Baixando imagem 3
+2023-10-27 16:07:57 - Não deu erro
+2023-10-27 16:08:38 - Deu bom :)
+2023-10-27 16:08:38 - Baixando imagem 4
+2023-10-27 16:08:42 - Não deu erro
+2023-10-27 16:09:38 - Deu bom :)
+2023-10-27 16:09:38 - Baixando imagem 5
+2023-10-27 16:09:39 - Não deu erro
+2023-10-27 16:09:59 - Deu bom :)
+2023-10-27 16:09:59 - Baixando imagem 6
+2023-10-27 16:10:00 - Não deu erro
+2023-10-27 16:10:19 - Deu bom :)
+2023-10-27 16:10:19 - Baixando imagem 7
+2023-10-27 16:10:20 - Não deu erro
+2023-10-27 16:10:39 - Deu bom :)
+2023-10-27 16:10:39 - Baixando imagem 8
+2023-10-27 16:10:40 - Não deu erro
+2023-10-27 16:10:57 - Deu bom :)
+2023-10-27 16:10:57 - Baixando imagem 9
+2023-10-27 16:10:58 - Não deu erro
+2023-10-27 16:11:06 - Deu bom :)
+2023-10-27 16:11:06 - Baixando imagem 10
+2023-10-27 16:11:07 - Não deu erro
+2023-10-27 16:11:26 - Deu bom :)
+2023-10-27 16:11:26 - Baixando imagem 11

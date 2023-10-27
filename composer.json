@@ -1,0 +1,8 @@
+{
+    "name": "seu-nome/virtual-dwv",
+    "description": "Importação de imóveis",
+    "type": "wordpress-plugin",
+    "require": {
+        "rmccue/requests": "^1.0"
+    }
+}

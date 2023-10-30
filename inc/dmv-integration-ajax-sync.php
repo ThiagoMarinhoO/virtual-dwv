@@ -12,7 +12,7 @@ function dwv_integration_ajax_sync() {
             //variável da última atualização do WP_post
             $post_last_update = '';
 
-            $published_at = get_field($field_last_updated_at , $existing_post);
+            $published_at = get_field('field_last_updated_at' , $existing_post);
             $post_modified_date = get_the_modified_date('', $existing_post);
 
             log_to_file('published_at: ' . $published_at);

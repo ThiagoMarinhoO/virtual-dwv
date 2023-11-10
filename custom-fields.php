@@ -103,7 +103,8 @@ function dwv_integration_custom_fields() {
           'key' => 'field_apartment_floor_plans',
           'label' => 'Plantas do Apartamento',
           'name' => 'apartment_floor_plans',
-          'type' => 'text',
+          'type' => 'gallery',  // Tipo de campo galeria
+          'instructions' => 'Selecione ou faça upload de imagens para a galeria do apartamento.',
         ),
       ),
       'location' => array(

@@ -7,7 +7,27 @@ function dwv_integration_ajax_sync() {
     if (isset($_POST['imovel'])) {
         $imovel = $_POST['imovel'];
 
+        $status_imovel = $imovel['status'];
+        $post_id = $imovel['id'];
+
+        if ($status_imovel != "active") {
+            // Movendo o post para a lixeira
+            wp_trash_post($post_id);
+        } else {
+            // Verificando se o post está na lixeira
+            $post_status = get_post_status($post_id);
+            if ($post_status === 'trash') {
+                // Restaurando o post
+                $post_data = array(
+                    'ID' => $post_id,
+                    'post_status' => 'publish',
+                );
+                wp_update_post($post_data);
+            }
+        }
+
         $existing_post = get_page_by_title($imovel['title'], OBJECT, 'imovel');
+        
         if ($existing_post) {
             //variável da última atualização do WP_post
             $post_last_update = '';
@@ -75,22 +95,61 @@ function dwv_integration_ajax_sync() {
             // Extrai a área total do apartamento
             $apartmentTotalArea = isset($imovel['unit']['total_area']) ? $imovel['unit']['total_area'] : null;
 
-            // // Agora você tem um array de URLs das galerias adicionais
-            // $apartmentAdditionalGalleries = isset($imovel['unit']['additional_galleries']) ? $imovel['unit']['additional_galleries'] : null;
-            // $processedGalleryAdditional = [];
+            // Agora você tem um array de URLs das galerias adicionais
+            $apartmentAdditionalGalleries = isset($imovel['unit']['additional_galleries']) ? $imovel['unit']['additional_galleries'] : null;
+            $unitGalleryAdditional = [];
             
-            // if ($apartmentAdditionalGalleries) {
-            //     foreach ($apartmentAdditionalGalleries as $gallery) {
-            //         if (isset($gallery['files']) && is_array($gallery['files'])) {
-            //             foreach ($gallery['files'] as $file) {
-            //                 if (isset($file['url'])) {
-            //                     $url = $file['url'];
-            //                     $processedGalleryAdditional[] = $url;
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
+            if ($apartmentAdditionalGalleries) {
+                log_to_file('Cheguei nas plantas');
+                $index = 1;
+                
+                foreach ($apartmentAdditionalGalleries as $image) {
+                    if (isset($image['url'])) {
+                        log_to_file('Baixando planta ' . $index);
+                        $url = $image['url'];
+                        
+                        // Baixa a imagem
+                        $tmp_name = download_url($url);
+            
+                        if (!is_wp_error($tmp_name)) {
+                            log_to_file('Não deu erro');
+                            // Redimensiona e comprime a imagem
+                            $image_data = wp_get_image_editor($tmp_name);
+                            if (!is_wp_error($image_data)) {
+                                $image_data->resize(800, 600, true); // Redimensiona para as dimensões desejadas
+                                $image_data->save($tmp_name);
+            
+                                // Adiciona a imagem otimizada ao WordPress
+                                $file_array = array(
+                                    'name' => basename($url),
+                                    'tmp_name' => $tmp_name
+                                );
+                                
+                                $attachment_id = media_handle_sideload($file_array, 0);
+                                
+                                if (!is_wp_error($attachment_id)) {
+                                    $unitGalleryAdditional[] = $attachment_id;
+                                    log_to_file('Baixou a planta :)');
+                                } else {
+                                    log_to_file('Deu erro :(');
+                                    $error_message = $attachment_id->get_error_message();
+                                    log_to_file(json_encode($imovel["title"] . $error_message));
+                                }
+                            } else {
+                                log_to_file('Erro ao redimensionar imagem: ' . $image_data->get_error_message());
+                            }
+                        } else {
+                            log_to_file('Erro ao fazer download da imagem: ' . $tmp_name->get_error_message());
+                        }
+                    }
+                    $index++;
+                }
+            }
+
+            if (!empty($unitGalleryAdditional)) {
+                update_field('field_apartment_additional_galleries', $unitGalleryAdditional, $post_id);
+                log_to_file("supostamente adicionado imagens ao campo acf");
+            }
             
             // Building Começa aqui 
 
@@ -200,7 +259,7 @@ function dwv_integration_ajax_sync() {
             }
 
             if(!empty($processedArchitecturalPlans)){
-                update_field('field_apartment_additional_galleries' , $processedArchitecturalPlans , $post_id);
+                update_field('field_apartment_floor_plans' , $processedArchitecturalPlans , $post_id);
                 log_to_file("supostamente adicionado imagens ao campo acf");
             }
             
@@ -384,21 +443,60 @@ function dwv_integration_ajax_sync() {
             $apartmentTotalArea = isset($imovel['unit']['total_area']) ? $imovel['unit']['total_area'] : null;
 
             // Agora você tem um array de URLs das galerias adicionais
-            // $apartmentAdditionalGalleries = isset($imovel['unit']['additional_galleries']) ? $imovel['unit']['additional_galleries'] : null;
-            // $processedGalleryAdditional = [];
+            $apartmentAdditionalGalleries = isset($imovel['unit']['additional_galleries']) ? $imovel['unit']['additional_galleries'] : null;
+            $unitGalleryAdditional = [];
+
+            if ($apartmentAdditionalGalleries) {
+                log_to_file('Cheguei nas plantas');
+                $index = 1;
+                
+                foreach ($apartmentAdditionalGalleries as $image) {
+                    if (isset($image['url'])) {
+                        log_to_file('Baixando planta ' . $index);
+                        $url = $image['url'];
+                        
+                        // Baixa a imagem
+                        $tmp_name = download_url($url);
             
-            // if ($apartmentAdditionalGalleries) {
-            //     foreach ($apartmentAdditionalGalleries as $gallery) {
-            //         if (isset($gallery['files']) && is_array($gallery['files'])) {
-            //             foreach ($gallery['files'] as $file) {
-            //                 if (isset($file['url'])) {
-            //                     $url = $file['url'];
-            //                     $processedGalleryAdditional[] = $url;
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
+                        if (!is_wp_error($tmp_name)) {
+                            log_to_file('Não deu erro');
+                            // Redimensiona e comprime a imagem
+                            $image_data = wp_get_image_editor($tmp_name);
+                            if (!is_wp_error($image_data)) {
+                                $image_data->resize(800, 600, true); // Redimensiona para as dimensões desejadas
+                                $image_data->save($tmp_name);
+            
+                                // Adiciona a imagem otimizada ao WordPress
+                                $file_array = array(
+                                    'name' => basename($url),
+                                    'tmp_name' => $tmp_name
+                                );
+                                
+                                $attachment_id = media_handle_sideload($file_array, 0);
+                                
+                                if (!is_wp_error($attachment_id)) {
+                                    $unitGalleryAdditional[] = $attachment_id;
+                                    log_to_file('Baixou a planta :)');
+                                } else {
+                                    log_to_file('Deu erro :(');
+                                    $error_message = $attachment_id->get_error_message();
+                                    log_to_file(json_encode($imovel["title"] . $error_message));
+                                }
+                            } else {
+                                log_to_file('Erro ao redimensionar imagem: ' . $image_data->get_error_message());
+                            }
+                        } else {
+                            log_to_file('Erro ao fazer download da imagem: ' . $tmp_name->get_error_message());
+                        }
+                    }
+                    $index++;
+                }
+            }
+
+            if (!empty($unitGalleryAdditional)) {
+                update_field('field_apartment_additional_galleries', $unitGalleryAdditional, $post_id);
+                log_to_file("supostamente adicionado imagens ao campo acf");
+            }
             
             // Building Começa aqui 
 
@@ -513,7 +611,7 @@ function dwv_integration_ajax_sync() {
 
             if(!empty($processedArchitecturalPlans)){
                 log_to_file('Entrei pra cadastrar a galeria');
-                update_field('field_apartment_additional_galleries' , $processedArchitecturalPlans , $post_id);
+                update_field('field_apartment_floor_plans' , $processedArchitecturalPlans , $post_id);
                 log_to_file("supostamente adicionado plantas ao campo acf");
             }
                 
@@ -598,6 +696,7 @@ function dwv_integration_ajax_sync() {
             // O campo "delivery_date" conterá a data de entrega do edifício.
             
             $buildingDeliveryDate = isset($imovel['building']['delivery_date']) ? $imovel['building']['delivery_date'] : null;
+
         
                                                     
             // Define os metadados do imóvel
